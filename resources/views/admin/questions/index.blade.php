@@ -28,7 +28,7 @@
                 </thead>
                 <tbody>
                     <?php $i = 0; ?>
-                    @foreach($listExam as $exame)
+                    @foreach($listQuestion as $exame)
                         <?php $i++; ?>
                     <tr>
                         <th>{{ $i }}</th>
@@ -72,7 +72,7 @@
         $(".deleteExam").on("click", function(){
             $.ajax({
                 type: "POST",
-                url: "{{ route('exam.delete') }}",
+                url: "{{ route('question.delete') }}",
                 data: {"id": $(this).attr("rel"), "_token": "{{ csrf_token() }}"}
             })
                 .done(function( response ) {

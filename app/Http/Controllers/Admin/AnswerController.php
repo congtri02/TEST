@@ -10,6 +10,7 @@ use App\Http\Requests\ExamRequest;
 use App\Http\Requests\QuestionRequest;
 use App\Model\Answer;
 use App\Model\Exam;
+use App\Model\Quiz;
 use App\Model\Question;
 use Illuminate\Http\Request;
 
@@ -75,9 +76,21 @@ class AnswerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function deleteAnswer(Request $request )
     {
-        //
+        $resultAjax = new \stdClass();
+        $resultAjax->status = false;
+        $resultAjax->message = "";
+        try{
+            Quiz::destroy([
+                'id' => $_POST["id"]
+            ]);
+            $resultAjax->status = true;
+            $resultAjax->message = "Remove exam successful";
+        }catch(\Exception $err){
+            $resultAjax->message = $err->getMessage();
+        }
+        echo json_encode($resultAjax);
     }
 
     /**

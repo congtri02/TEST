@@ -33,27 +33,27 @@
             </li>
 
 
-            <li class="nav-item">
-                <a href="{{aurl('question/create')}}" class="nav-link mb-0">
-                    <i class="nav-icon far fa-file-alt"></i>
-                    <p>{{ trans('admin.new_question')}}</p>
-                </a>
-            </li>
+{{--            <li class="nav-item">--}}
+{{--                <a href="{{aurl('question/create')}}" class="nav-link mb-0">--}}
+{{--                    <i class="nav-icon far fa-file-alt"></i>--}}
+{{--                    <p>{{ trans('admin.new_question')}}</p>--}}
+{{--                </a>--}}
+{{--            </li>--}}
 
 
-            <li class="nav-item">
-                <a href="{{aurl('answer/create')}}" class="nav-link mb-0">
-                    <i class="nav-icon far fa-file-alt"></i>
-                    <p>{{ trans('admin.new_answer')}}</p>
-                </a>
-            </li>
+{{--            <li class="nav-item">--}}
+{{--                <a href="{{aurl('answer/create')}}" class="nav-link mb-0">--}}
+{{--                    <i class="nav-icon far fa-file-alt"></i>--}}
+{{--                    <p>{{ trans('admin.new_answer')}}</p>--}}
+{{--                </a>--}}
+{{--            </li>--}}
 
-            <li class="nav-item">
-                <a href="{{aurl('answer')}}" class="nav-link mb-0">
-                    <i class="nav-icon far fa-file-alt"></i>
-                    <p>{{ trans('admin.answers')}}</p>
-                </a>
-            </li>
+{{--            <li class="nav-item">--}}
+{{--                <a href="{{aurl('answer')}}" class="nav-link mb-0">--}}
+{{--                    <i class="nav-icon far fa-file-alt"></i>--}}
+{{--                    <p>{{ trans('admin.answers')}}</p>--}}
+{{--                </a>--}}
+{{--            </li>--}}
 
 
         </ul>

@@ -17,7 +17,7 @@
                     <tr>
                         <th>No</th>
                         <th>Name Exame</th>
-                        <th style="text-align: center; width: 60px;">Action</th>
+                        <th style=" text-align: center; width: 60px;">Action</th>
                     </tr>
                 </thead>
                 <tbody>

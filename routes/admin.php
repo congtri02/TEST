@@ -48,11 +48,12 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function() {
         Route::get('quiz/list', 'QuestionController@quizList')->name('quiz.list');
         Route::get('question/create', 'QuestionController@create')->name('question.create');
         Route::post('question/store', 'QuestionController@storeQuestion')->name('question.store');
-
+        Route::POST('question/delete', 'QuestionController@deleteQuestion')->name('question.delete');
         // Answer
         Route::resource('answer', 'AnswerController');
         Route::get('answer/create', 'AnswerController@createAnswer')->name('answer.create');
         Route::post('answer/store', 'AnswerController@storeAnswer')->name('answer.store');
+        Route::POST('answer/delete', 'AnswerController@deleteAnswer')->name('answer.delete');
 
     });
 

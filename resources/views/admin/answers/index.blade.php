@@ -9,9 +9,28 @@
     </div>
     <!-- /.card-header -->
     <div class="card-body">
+        <table class="dataTable table table-bordered table-striped dtr-inline">
+            <thead>
+            <tr>
+                <th>No</th>
+                <th>Name Exame</th>
+                <th style="text-align: center; width: 60px;">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php $i = 0; ?>
+            @foreach($listExam as $exame)
+                    <?php $i++; ?>
+                <tr>
+                    <th>{{ $i }}</th>
+                    <th>{{ $exame->title }}</th>
+                    <th style="float: right;"><a rel="{{ $exame->id }}" class="deleteExam btn btn-danger" style="color: #fff;font-weight: bold;">Delete</a> </th>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
         <form id="form_data" action="{{ aurl('exam/destroy/all') }}" method="POST">
             @csrf
-            @method('DELETE')
 
             {!! $dataTable->table(['class' => 'dataTable table table-bordered table-striped dtr-inline'], true) !!}
         </form>

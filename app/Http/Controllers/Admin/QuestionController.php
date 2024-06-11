@@ -38,8 +38,24 @@ class QuestionController extends Controller
     public function quizList(Request $request)
     {
         return view('admin.questions.index', [
-            'listExam' => Quiz::all()
+            'listQuestion' => Quiz::all()
         ]);
+    }
+    public function deleteQuestion(Request $request )
+    {
+        $resultAjax = new \stdClass();
+        $resultAjax->status = false;
+        $resultAjax->message = "";
+        try{
+            Quiz::destroy([
+                'id' => $_POST["id"]
+            ]);
+            $resultAjax->status = true;
+            $resultAjax->message = "Remove exam successful";
+        }catch(\Exception $err){
+            $resultAjax->message = $err->getMessage();
+        }
+        echo json_encode($resultAjax);
     }
 
     public function create(ExamDatatable $exam)
