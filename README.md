@@ -8,27 +8,33 @@
 </p>
 
 ## Cài đặt
-1. **Tải Code.**
-2. **Chạy lệnh**
-   ```
-   composer install
-   ```
-3. **Tạo tệp .env bằng cách sao chép .env.example hoặc chạy lệnh**
-   ```
-   cp .env.example .env
-   ```
 
-4. **Update the database name and credentials in `.env` file**  
-   ```
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE='tên database'
-DB_USERNAME=root
-DB_PASSWORD=
-   ```
-5. **Chạy lệnh sau**
-   ```
-   php artisan migrate --seed
-   ```
+1. **Tải Code.**
+2. **Chạy lệnh sau để cài đặt các dependency:**
+    ```bash
+    composer install
+    ```
+3. **Tạo tệp .env bằng cách sao chép .env.example hoặc chạy lệnh:**
+    ```bash
+    cp .env.example .env
+    ```
+
+4. **Cập nhật tên cơ sở dữ liệu và thông tin xác thực trong tệp .env:**
+    ```bash
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE='tên database'
+    DB_USERNAME=root
+    DB_PASSWORD=
+    ```
+5. **Chạy lệnh sau để thực hiện migration và seeding:**
+    ```bash
+    php artisan migrate --seed
+    ```
+
+6. **Chạy ứng dụng qua XAMPP hoặc chạy lệnh sau:**
+    ```bash
+    php artisan serve
+    ```
 
